@@ -2,25 +2,28 @@ package filosofos.dominio;
 
 import java.util.Objects;
 
-public class Filosofos {
+public class Filosofo {
     private int id;
     private String nombre;
     private String apellido;
     private String pensamiento;
 
-    public Filosofos(){}
+    public Filosofo(){}
 
-    public Filosofos(int id){
+    // constructor para buscar registro y eliminar
+    public Filosofo(int id){
         this.id = id;
     }
 
-    public Filosofos(String nombre, String apellido, String pensamiento){
+    // constructor para agregar registro
+    public Filosofo(String nombre, String apellido, String pensamiento){
         this.nombre = nombre;
         this.apellido = apellido;
         this.pensamiento = pensamiento;
     }
 
-    public Filosofos(int id, String nombre, String apellido, String pensamiento){
+    //constructor para modificar registro
+    public Filosofo(int id, String nombre, String apellido, String pensamiento){
         this(nombre, apellido, pensamiento);
         this.id = id;
     }
@@ -59,7 +62,7 @@ public class Filosofos {
 
     @Override
     public String toString() {
-        return "Filosofos{" +
+        return "Filosofo{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
@@ -71,7 +74,7 @@ public class Filosofos {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Filosofos filosofos = (Filosofos) o;
+        Filosofo filosofos = (Filosofo) o;
         return id == filosofos.id && Objects.equals(nombre, filosofos.nombre) && Objects.equals(apellido, filosofos.apellido) && Objects.equals(pensamiento, filosofos.pensamiento);
     }
 
