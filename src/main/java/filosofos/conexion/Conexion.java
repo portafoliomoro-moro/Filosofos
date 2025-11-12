@@ -7,7 +7,7 @@ public class Conexion {
     public static Connection getConexion(){
         Connection conexion = null;
         var baseDatos = "filosofos_db";
-        var url = "jdbc:mysql://localhost:3306/ " + baseDatos;
+        var url = "jdbc:mysql://localhost:3306/" + baseDatos;
         var usuario = "root";
         var password = "admin";
         try{
