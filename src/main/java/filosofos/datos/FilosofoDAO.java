@@ -9,7 +9,7 @@ import java.util.List;
 
 import static filosofos.conexion.Conexion.getConexion;
 
-public class FilosofoDAO implements IFolosofoDAO {
+public class FilosofoDAO implements IFilosofoDAO {
 
     @Override
     public List<Filosofo> listarFilosofo() {
@@ -146,7 +146,7 @@ public class FilosofoDAO implements IFolosofoDAO {
     }
 
 //    public static void main(String[] args) {
-//        IFolosofoDAO filosofoDao = new FilosofoDAO();
+//        IFilosofoDAO filosofoDao = new FilosofoDAO();
 //        System.out.println("*** Eliminar Filósofo ***");
 //        var eliminar = new Filosofo(4);
 //        var eliminado = filosofoDao.eliminarFilosofo(eliminar);

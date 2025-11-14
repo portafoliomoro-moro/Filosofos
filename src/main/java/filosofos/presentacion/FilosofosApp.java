@@ -1,7 +1,7 @@
 package filosofos.presentacion;
 
 import filosofos.datos.FilosofoDAO;
-import filosofos.datos.IFolosofoDAO;
+import filosofos.datos.IFilosofoDAO;
 import filosofos.dominio.Filosofo;
 
 import java.util.Scanner;
@@ -15,7 +15,7 @@ public class FilosofosApp {
         var salir = false;
         var consola = new Scanner(System.in);
 
-        IFolosofoDAO filosofoDao = new FilosofoDAO();
+        IFilosofoDAO filosofoDao = new FilosofoDAO();
         while(!salir){
             try{
                 var opcion = mostrarMenu(consola);
@@ -40,7 +40,7 @@ public class FilosofosApp {
         return Integer.parseInt(consola.nextLine());
     }
 
-    private static boolean ejecutarOpcion(int opcion, Scanner consola, IFolosofoDAO folosofoDao){
+    private static boolean ejecutarOpcion(int opcion, Scanner consola, IFilosofoDAO folosofoDao){
         var salir = false;
         switch(opcion){
             case 1 -> {
